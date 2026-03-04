@@ -3,6 +3,7 @@
 > Production-ready MCP servers for [Claude Code](https://claude.ai/code) — give Claude the tools to browse, read, write, and reason beyond its defaults.
 
 [![Validate](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml/badge.svg)](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/release/claude-contrib/claude-services)](https://github.com/claude-contrib/claude-services/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 MCP servers extend what Claude can *do* — not just what it knows. Install a service and Claude gains new capabilities it can use autonomously: controlling a real browser, reading and writing files, structuring its reasoning step by step.
