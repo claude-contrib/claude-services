@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "A curated collection of MCP servers for Claude Code",
-    "version": "1.1.0"
+    "version": "2.0.0"
   },
   "plugins": [
     {
@@ -18,8 +18,17 @@
       },
       "source": "./plugins/thinking",
       "category": "mcp-servers",
-      "tags": ["mcp", "thinking", "analysis", "problem-solving"],
-      "keywords": ["mcp", "sequential-thinking", "analysis"]
+      "tags": [
+        "mcp",
+        "thinking",
+        "analysis",
+        "problem-solving"
+      ],
+      "keywords": [
+        "mcp",
+        "sequential-thinking",
+        "analysis"
+      ]
     },
     {
       "name": "filesystem",
@@ -30,8 +39,17 @@
       },
       "source": "./plugins/filesystem",
       "category": "mcp-servers",
-      "tags": ["mcp", "filesystem", "files", "directories"],
-      "keywords": ["mcp", "filesystem", "file-operations"]
+      "tags": [
+        "mcp",
+        "filesystem",
+        "files",
+        "directories"
+      ],
+      "keywords": [
+        "mcp",
+        "filesystem",
+        "file-operations"
+      ]
     },
     {
       "name": "playwright",
@@ -42,8 +60,17 @@
       },
       "source": "./plugins/playwright",
       "category": "mcp-servers",
-      "tags": ["mcp", "playwright", "browser", "automation"],
-      "keywords": ["mcp", "playwright", "browser-automation"]
+      "tags": [
+        "mcp",
+        "playwright",
+        "browser",
+        "automation"
+      ],
+      "keywords": [
+        "mcp",
+        "playwright",
+        "browser-automation"
+      ]
     }
   ]
 }
