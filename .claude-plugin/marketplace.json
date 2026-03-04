@@ -1,10 +1,11 @@
 {
-  "name": "extra-services",
+  "name": "claude-services",
   "owner": {
-    "name": "claude-contrib"
+    "name": "claude-contrib",
+    "email": "claude-contrib@github.com"
   },
   "metadata": {
-    "description": "A curated collection of Claude Code plugins for our team",
+    "description": "A curated collection of MCP servers for Claude Code",
     "version": "1.1.0"
   },
   "plugins": [
@@ -17,17 +18,8 @@
       },
       "source": "./plugins/thinking-mcp",
       "category": "mcp-servers",
-      "tags": [
-        "mcp",
-        "thinking",
-        "analysis",
-        "problem-solving"
-      ],
-      "keywords": [
-        "mcp",
-        "sequential-thinking",
-        "analysis"
-      ]
+      "tags": ["mcp", "thinking", "analysis", "problem-solving"],
+      "keywords": ["mcp", "sequential-thinking", "analysis"]
     },
     {
       "name": "filesystem-mcp",
@@ -38,17 +30,8 @@
       },
       "source": "./plugins/filesystem-mcp",
       "category": "mcp-servers",
-      "tags": [
-        "mcp",
-        "filesystem",
-        "files",
-        "directories"
-      ],
-      "keywords": [
-        "mcp",
-        "filesystem",
-        "file-operations"
-      ]
+      "tags": ["mcp", "filesystem", "files", "directories"],
+      "keywords": ["mcp", "filesystem", "file-operations"]
     },
     {
       "name": "playwright-mcp",
@@ -59,17 +42,8 @@
       },
       "source": "./plugins/playwright-mcp",
       "category": "mcp-servers",
-      "tags": [
-        "mcp",
-        "playwright",
-        "browser",
-        "automation"
-      ],
-      "keywords": [
-        "mcp",
-        "playwright",
-        "browser-automation"
-      ]
+      "tags": ["mcp", "playwright", "browser", "automation"],
+      "keywords": ["mcp", "playwright", "browser-automation"]
     }
   ]
 }
