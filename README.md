@@ -1,20 +1,19 @@
 # Claude Services
 
-A curated collection of MCP servers for Claude Code.
+> Production-ready MCP servers for [Claude Code](https://claude.ai/code) — give Claude the tools to browse, read, write, and reason beyond its defaults.
 
-[![Plugins](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml/badge.svg)](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml)
+[![Validate](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml/badge.svg)](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## What are Services?
+MCP servers extend what Claude can *do* — not just what it knows. Install a service and Claude gains new capabilities it can use autonomously: controlling a real browser, reading and writing files, structuring its reasoning step by step.
 
-Services are MCP (Model Context Protocol) servers that provide additional tools Claude uses autonomously during a session. They differ from:
+## How Services Work
 
-- **Skills** ([claude-skills](https://github.com/claude-contrib/claude-skills)) — slash commands you invoke intentionally
-- **Extensions** ([claude-extensions](https://github.com/claude-contrib/claude-extensions)) — hooks and context rules that run passively
+Each service is an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that Claude Code connects to as an external process. Once installed, Claude picks up the new tools automatically — no extra prompting required.
 
-## Installation
+## Quickstart
 
-Add the marketplace to your Claude Code settings (`~/.claude/settings.json`):
+**1. Register the marketplace** in `~/.claude/settings.json`:
 
 ```json
 {
@@ -29,30 +28,47 @@ Add the marketplace to your Claude Code settings (`~/.claude/settings.json`):
 }
 ```
 
-Then install a service:
+**2. Install a service** inside Claude Code:
 
-```text
-/plugin install <plugin-name>@claude-services
 ```
+/plugin install playwright-mcp@claude-services
+```
+
+Claude now has browser automation tools available in every session.
 
 ## Available Services
 
-| Plugin | Description |
-| --- | --- |
-| [`thinking-mcp`](plugins/thinking-mcp/README.md) | Sequential thinking for structured problem analysis |
-| [`filesystem-mcp`](plugins/filesystem-mcp/README.md) | File system operations |
-| [`playwright-mcp`](plugins/playwright-mcp/README.md) | Browser automation |
+| Service | Description | Tools unlocked |
+|---------|-------------|----------------|
+| [`thinking-mcp`](plugins/thinking-mcp/README.md) | Sequential thinking for structured problem analysis | Break down complex problems step by step before acting |
+| [`filesystem-mcp`](plugins/filesystem-mcp/README.md) | Filesystem access beyond the working directory | Read, write, and navigate files across your system |
+| [`playwright-mcp`](plugins/playwright-mcp/README.md) | Full browser automation via Playwright | Navigate pages, click, fill forms, take screenshots |
 
-## Contributing
+## Publish Your Own Service
 
-1. Fork this repository
-2. Create a plugin directory under `plugins/<your-plugin>/`
-3. Add `.claude-plugin/plugin.json`, a `.mcp.json` server config, and a `README.md`
-4. Register your plugin in `.claude-plugin/marketplace.json`
-5. Open a pull request — CI validates the structure automatically
+Have an MCP server your team relies on? Package it for one-command install:
 
-See [docs/](docs/) for plugin development guides.
+```
+plugins/your-service/
+├── .claude-plugin/plugin.json   # name, version, description
+├── .mcp.json                    # server command + args
+└── README.md                   # what it unlocks + install instructions
+```
+
+1. **Fork** this repo and drop your plugin under `plugins/`
+2. **Register** it in `.claude-plugin/marketplace.json`
+3. **Open a PR** — CI validates structure automatically
+
+→ [Read the full authoring guide](docs/README.md)
+
+## The claude-contrib Ecosystem
+
+| Marketplace | Install key | What it provides |
+|-------------|------------|-----------------|
+| [claude-extensions](https://github.com/claude-contrib/claude-extensions) | `@claude-extensions` | Hooks, context rules, session automation |
+| **claude-services** ← you are here | `@claude-services` | MCP servers — browser, filesystem, sequential thinking |
+| [claude-skills](https://github.com/claude-contrib/claude-skills) | `@claude-skills` | Slash commands — `/commit`, and more |
 
 ## License
 
-MIT
+MIT — use it, fork it, extend it.
