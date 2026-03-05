@@ -49,3 +49,8 @@ temp/
 *.zip
 *.tar.gz
 *.rar
+
+# Nix
+.direnv/
+result
+result-*

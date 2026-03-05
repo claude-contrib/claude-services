@@ -11,6 +11,57 @@
           "jsonpath": "$.metadata.version"
         }
       ]
+    },
+    "plugins/thinking": {
+      "release-type": "simple",
+      "component": "thinking",
+      "skip-github-release": true,
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "plugins/thinking/.claude-plugin/plugin.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": ".claude-plugin/marketplace.json",
+          "jsonpath": "$.plugins[?(@.name=='thinking')].version"
+        }
+      ]
+    },
+    "plugins/filesystem": {
+      "release-type": "simple",
+      "component": "filesystem",
+      "skip-github-release": true,
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "plugins/filesystem/.claude-plugin/plugin.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": ".claude-plugin/marketplace.json",
+          "jsonpath": "$.plugins[?(@.name=='filesystem')].version"
+        }
+      ]
+    },
+    "plugins/playwright": {
+      "release-type": "simple",
+      "component": "playwright",
+      "skip-github-release": true,
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "plugins/playwright/.claude-plugin/plugin.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": ".claude-plugin/marketplace.json",
+          "jsonpath": "$.plugins[?(@.name=='playwright')].version"
+        }
+      ]
     }
   }
 }
