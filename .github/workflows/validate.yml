@@ -33,46 +33,13 @@ jobs:
         run: check-jsonschema --schemafile .github/schemas/mcp.schema.json plugins/*/.mcp.json
 
       - name: Check no unpinned versions in .mcp.json
-        run: |
-          error=0
-          for f in plugins/*/.mcp.json; do
-            if grep -qE '"@latest|"@\^|"@~' "$f"; then
-              echo "✗ $f contains an unpinned version (@latest, ^, or ~)"
-              error=1
-            else
-              echo "✓ $f versions are pinned"
-            fi
-          done
-          exit $error
+        run: .github/scripts/check-pinned-versions.sh
 
       - name: Check each plugin listed in marketplace has a directory
-        run: |
-          error=0
-          while IFS= read -r source; do
-            path="${source#./}"
-            if [ ! -d "$path" ]; then
-              echo "✗ Missing directory for plugin source: $source"
-              error=1
-            else
-              echo "✓ $source"
-            fi
-          done < <(jq -r '.plugins[].source' .claude-plugin/marketplace.json)
-          exit $error
+        run: .github/scripts/check-plugin-dirs.sh
 
       - name: Check plugin.json versions match marketplace entries
-        run: |
-          error=0
-          while IFS= read -r name; do
-            marketplace_ver=$(jq -r --arg n "$name" '.plugins[] | select(.name == $n) | .version' .claude-plugin/marketplace.json)
-            plugin_ver=$(jq -r '.version' "plugins/${name}/.claude-plugin/plugin.json")
-            if [ "$marketplace_ver" != "$plugin_ver" ]; then
-              echo "✗ Version mismatch for '$name': marketplace=$marketplace_ver plugin.json=$plugin_ver"
-              error=1
-            else
-              echo "✓ $name version $plugin_ver in sync"
-            fi
-          done < <(jq -r '.plugins[].name' .claude-plugin/marketplace.json)
-          exit $error
+        run: .github/scripts/check-version-sync.sh
 
   check-duplicates:
     name: Check Duplicate Plugin Names
@@ -81,10 +48,4 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Check for duplicate plugin names
-        run: |
-          duplicates=$(jq -r '.plugins[].name' .claude-plugin/marketplace.json | sort | uniq -d)
-          if [ -n "$duplicates" ]; then
-            echo "✗ Duplicate plugin names: $duplicates"
-            exit 1
-          fi
-          echo "✓ No duplicate plugin names"
+        run: .github/scripts/check-duplicate-names.sh
