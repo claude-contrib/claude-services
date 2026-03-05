@@ -32,7 +32,7 @@ Each service is an [MCP (Model Context Protocol)](https://modelcontextprotocol.i
 **2. Install a service** inside Claude Code:
 
 ```
-/plugin install playwright-mcp@claude-services
+/plugin install playwright@claude-services
 ```
 
 Claude now has browser automation tools available in every session.
