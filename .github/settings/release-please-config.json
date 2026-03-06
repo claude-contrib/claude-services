@@ -15,6 +15,7 @@
     "plugins/thinking": {
       "release-type": "simple",
       "component": "thinking",
+      "skip-github-release": true,
       "extra-files": [
         {
           "type": "json",
@@ -31,6 +32,7 @@
     "plugins/filesystem": {
       "release-type": "simple",
       "component": "filesystem",
+      "skip-github-release": true,
       "extra-files": [
         {
           "type": "json",
@@ -47,6 +49,7 @@
     "plugins/playwright": {
       "release-type": "simple",
       "component": "playwright",
+      "skip-github-release": true,
       "extra-files": [
         {
           "type": "json",
