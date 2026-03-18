@@ -12,6 +12,25 @@ MCP servers extend what Claude can *do* — not just what it knows. Install a se
 
 Each service is an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that Claude Code connects to as an external process. Once installed, Claude picks up the new tools automatically — no extra prompting required.
 
+## Requirements
+
+- [Node.js](https://nodejs.org/) with `npx` (`node`)
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/setup) (`claude`)
+
+**macOS (Homebrew):**
+
+```bash
+brew install node
+```
+
+**Nix:**
+
+```bash
+nix profile install nixpkgs#nodejs
+```
+
+Install `claude` separately: [Claude Code installation guide](https://docs.anthropic.com/en/docs/claude-code/setup)
+
 ## Quickstart
 
 **1. Register the marketplace** in `~/.claude/settings.json`:
