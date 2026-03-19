@@ -90,6 +90,7 @@ plugins/your-service/
 | [claude-languages](https://github.com/claude-contrib/claude-languages) | LSP language servers — completions, diagnostics, hover |
 | [claude-sandbox](https://github.com/claude-contrib/claude-sandbox) | Sandboxed Docker environment for Claude Code |
 | **claude-services** ← you are here | MCP servers — browser, filesystem, sequential thinking |
+| [claude-skills](https://github.com/claude-contrib/claude-skills) | Slash commands for Claude Code |
 | [claude-status](https://github.com/claude-contrib/claude-status) | Live status line — context, cost, model, branch, worktree |
 
 ## License
