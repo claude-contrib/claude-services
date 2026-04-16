@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/claude-contrib/claude-services/compare/v1.1.1...v1.1.2) (2026-04-16)
+
+
+### Bug Fixes
+
+* add postCreateCommand to restore nix volume permissions ([c5f6e9e](https://github.com/claude-contrib/claude-services/commit/c5f6e9eb8d3e912f90a7b3e9a7b929937ed9fc26))
+
 ## [1.1.1](https://github.com/claude-contrib/claude-services/compare/v1.1.0...v1.1.1) (2026-03-06)
 
 
