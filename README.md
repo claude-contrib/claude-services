@@ -3,7 +3,7 @@
 > Production-ready MCP servers for [Claude Code](https://claude.ai/code) — give Claude the tools to browse, read, write, and reason beyond its defaults.
 
 [![Claude](https://img.shields.io/badge/Claude-AI-black?logo=anthropic)](https://claude.ai)
-[![Validate](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml/badge.svg)](https://github.com/claude-contrib/claude-services/actions/workflows/validate.yml)
+[![CI](https://github.com/claude-contrib/claude-services/actions/workflows/ci.yml/badge.svg)](https://github.com/claude-contrib/claude-services/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/claude-contrib/claude-services)](https://github.com/claude-contrib/claude-services/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
