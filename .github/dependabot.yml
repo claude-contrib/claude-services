@@ -6,27 +6,11 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     groups:
-      all-actions:
+      all-github-actions:
         patterns: ["*"]
     labels:
       - "dependencies"
-      - "github-actions"
       - "auto-merge"
     commit-message:
       prefix: "chore"
       include: "scope"
-
-  - package-ecosystem: "npm"
-    directory: "/plugins/thinking"
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "npm"
-    directory: "/plugins/filesystem"
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "npm"
-    directory: "/plugins/playwright"
-    schedule:
-      interval: "weekly"
