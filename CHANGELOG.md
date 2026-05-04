@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/claude-contrib/claude-services/compare/v1.1.2...v1.1.3) (2026-05-04)
+
+
+### Bug Fixes
+
+* **github:** correct action versions in update.yml ([51b9095](https://github.com/claude-contrib/claude-services/commit/51b90953364fcdc726515152ce829cf353f63b83))
+
 ## [1.1.2](https://github.com/claude-contrib/claude-services/compare/v1.1.1...v1.1.2) (2026-04-16)
 
 
