@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/claude-contrib/claude-services/compare/v1.1.3...v1.1.4) (2026-11-07)
+
+
+### Bug Fixes
+
+* **ci:** merge with the App token so main gets its CI run ([#45](https://github.com/claude-contrib/claude-services/issues/45)) ([4d6243c](https://github.com/claude-contrib/claude-services/commit/4d6243c57ac62a96868400c4facee9ac59d7063f))
+
 ## [1.1.3](https://github.com/claude-contrib/claude-services/compare/v1.1.2...v1.1.3) (2026-05-04)
 
 
